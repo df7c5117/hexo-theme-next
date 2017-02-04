@@ -1,32 +1,29 @@
-# NexT
+# NexT 
+### modified by df7c5117
 
 > 精于心，简于形
 
-<a href="http://notes.iissnan.com" target="_blank">在线预览 Preview</a> | <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
-
-[![Join the chat at https://gitter.im/iissnan/hexo-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
-
+<a href="https://df7c5117.github.io" target="_blank">在线预览 Preview</a> | <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> 
 
 ## 浏览器支持 Browser support
 
 ![Browser support](http://iissnan.com/nexus/next/browser-support.png)
 
-
-## 贡献 Contributing
-
-接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的`Pull Request`。
-
-Any types of contribution are welcome. Thanks.
-
-## 开发 Development
+## 简介 Introduction
 
 NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。
 
 NexT is built for easily use with elegant appearance. First things first, always keep things simple.
 
-## [开发历史 Changelog](https://github.com/iissnan/hexo-theme-next/wiki/Changelog)
+这个修改的版本移除了侧栏，增加了题图，同时为方便本人使用精简了一些模块，包括但不限于`canvas-nest`,`fancybox`,`font-awesome`这类你们觉得可能不必要精简的东西……
+
+This modified version was removed sidebar and added banner images,then removed some libraries like `canvas-nest`,`fancybox`,`font-awesome` as well …
+
+## 安装 Installation 
+
+请将本repo下的文件覆盖`hexo/themes/next`文件夹下的同名文件。
+
+Please overwrite the file under this repo with `hexo/themes/next` folder under the same name file.
 
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
