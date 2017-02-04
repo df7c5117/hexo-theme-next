@@ -1,13 +1,12 @@
 .site-nav {
   +mobile() {
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 52px;
+    top: 0px;
     margin: 0;
     width: 100%;
     padding: 0;
-    background: white;
-    border-bottom: 1px solid $gray-lighter;
+    background: #333;
     z-index: 1;
   }
 }
@@ -19,6 +18,7 @@
   +mobile() {
     display: block;
     margin: 0 10px;
+    text-align:center;
     vertical-align: top;
   }
 

@@ -11,6 +11,9 @@
   <div class="custom-logo-site-title">
     <a href="{{ config.root }}"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
+      <img class="author-image" itemprop="image"
+               src="{{ url_for( theme.avatar | default(theme.images + '/avatar.png') ) }}"
+               alt="{{ theme.author }}" />
       <span class="site-title">{{ config.title }}</span>
       <span class="logo-line-after"><i></i></span>
     </a>
@@ -24,9 +27,7 @@
 
 <div class="site-nav-toggle">
   <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
+    <span class="navmenu">MENU</span>
   </button>
 </div>
 
@@ -69,6 +70,18 @@
       {% include 'search.swig' %}
     </div>
   {% endif %}
+
+    <div class="links-of-author">
+          {% if theme.social %}
+            {% for name, link in theme.social %}
+              <span class="links-of-author-item">
+                <a href="{{ link }}" target="_blank" title="{{ name }}">
+                  {{ name }}
+                </a>
+              </span>
+            {% endfor %}
+          {% endif %}
+        </div>
 </nav>
 
 {% include '../_custom/header.swig' %}

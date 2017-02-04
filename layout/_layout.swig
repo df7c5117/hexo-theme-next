@@ -13,7 +13,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
 
-  {% include '_scripts/third-party/analytics.swig' %}
 
   {% set container_class = "container one-collumn " %}
   {% if theme.sidebar.position %}
@@ -33,25 +32,20 @@
           <div id="content" class="content">
             {% block content %}{% endblock %}          
           </div>
-          {% include '_partials/duoshuo-hot-articles.swig' %}
           {% include '_partials/comments.swig' %}
         </div>
-        {% if theme.sidebar.display !== 'remove' %}
-          {% block sidebar %}{% endblock %}
-        {% endif %}
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
         {% include '_partials/footer.swig' %}
-        {% include '_scripts/third-party/analytics/busuanzi-counter.swig' %}
         {% block footer %}{% endblock %}
       </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+      <span class="topbtn">TOP</span>
     </div>
   </div>
 
@@ -66,12 +60,7 @@
   {% include '_scripts/boostrap.swig' %}
 
   {% include '_scripts/third-party/comments.swig' %}
-  {% include '_scripts/third-party/tinysou.swig' %}
-  {% include '_scripts/third-party/localsearch.swig' %}
   {% include '_scripts/third-party/mathjax.swig' %}
-  {% include '_scripts/third-party/lean-analytics.swig' %}
-  {% include '_scripts/baidu-push.swig' %}
-  {% include '_components/algolia-search/assets.swig' %}
 
 </body>
 </html>

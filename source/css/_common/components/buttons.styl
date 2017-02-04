@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 0 20px;
+  padding: 3px 25px;
   font-size: $btn-default-font-size;
   color: $btn-default-color;
   background: $btn-default-bg;
@@ -15,14 +15,29 @@
     color: $btn-default-hover-color;
     background: $btn-default-hover-bg;
   }
+  &:focus,&:active {
+    border:none
+  }
 }
 
-.btn-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: $text-color;
-  border-radius: 1px;
+.site-nav-toggle button{
+    position:fixed;
+    z-index:99999;
+    margin-top: 2px;
+    padding: 9px 10px;
+    background: transparent;
+    border: none;
+    width: 60px;
+    height: 40px;
+}
 
+.navmenu {
+  color:#aaa;
+  padding:-15px;
+  font-family:"CR_TB1_V4";
   &+.btn-bar { margin-top: 4px; }
+}
+.topbtn{
+  color:#aaa;
+  font-family:"CR_TB1_V4";
 }
