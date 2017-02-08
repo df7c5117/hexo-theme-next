@@ -18,27 +18,38 @@ NexT is built for easily use with elegant appearance. First things first, always
 **17-2-8**
 
 * 修改后的搜索界面重新上线。仅支持本地搜索。请在使用本地搜索前使用安装本地搜索插件。
+
  `$ npm install hexo-generator-search --save` 
+ 
  `$ npm install hexo-generator-searchdb --save`
 
  并在hexo目录的 `_config.yml` 文件中加入以下字段：
+ 
  `search:
   path: search.xml
   field: post
   format: html
   limit: 10000`
+  
 
 * 新增了每次刷新更换banner背景图功能。（默认开启）
+
  在主题目录的 `_config.yml` 文件中修改以下字段：
+ 
  `#banner
 	switch_banner: true
 	banner_count: 9`
+  
  其中，`banner_count`是你需要更换图片的总数量。默认为9张
+ 
  之后请在 `主题目录\source\images\banner` 下将你想要更换的jpg格式图片命名为阿拉伯数字，从1开始。
+ 
  如果不想使用更换图片功能而只想展示单张图片，请把 `switch_banner` 改成 `false` ，并将 `主题目录\source\images\banner`里的 `banner.jpg` 替换为你想要使用的jpg图片。
 
 * 新增了防盗图插件，默认启用。（贡献者：[@CRH380A-2722](https://github.com/CRH380A-2722/jQuery-picopyright)）
+
  调用方式：为需要保护版权的图片添加id值或者class值.
+ 
  `<img class="protected" src="./timg.jpg">`
 
 **17-2-5**
