@@ -32,17 +32,14 @@
 </div>
 
 <nav class="site-nav">
-  {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || config.search %}
 
+  {% set hasSearch = config.search %}
   {% if theme.menu %}
     <ul id="menu" class="menu">
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
           <a href="{{ url_for(path) }}" rel="section">
-            {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
-            {% endif %}
             {{ __('menu.' + itemName) }}
           </a>
         </li>
@@ -50,14 +47,9 @@
 
       {% if hasSearch %}
         <li class="menu-item menu-item-search">
-          {% if theme.swiftype_key %}
-            <a href="javascript:;" class="st-search-show-outputs">
-          {% elseif config.search || theme.algolia_search.enable %}
+          {% if config.search %}
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
-            {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            {% endif %}
             {{ __('menu.search') }}
           </a>
         </li>
@@ -65,10 +57,8 @@
     </ul>
   {% endif %}
 
-  {% if hasSearch %}
-    <div class="site-search">
+{% if hasSearch %}
       {% include 'search.swig' %}
-    </div>
   {% endif %}
 
     <div class="links-of-author">

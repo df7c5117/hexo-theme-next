@@ -9,20 +9,17 @@
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
 
 
   {% set container_class = "container one-collumn " %}
-  {% if theme.sidebar.position %}
-    {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
-  {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
-    <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" style="" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
     </header>
 
@@ -51,6 +48,7 @@
 
   {% include '_scripts/vendors.swig' %}
   {% include '_scripts/commons.swig' %}
+  {% include '_scripts/third-party/localsearch.swig' %}
 
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
@@ -61,6 +59,33 @@
 
   {% include '_scripts/third-party/comments.swig' %}
   {% include '_scripts/third-party/mathjax.swig' %}
+
+  <div class="copyright">
+    <p class="copy-msg">
+        <span class="copy-icon"></span>
+        <br>
+        不行！你想拿我的图图干什么！
+        <br>
+        版权所有 / 作者保留所有权利
+    </p>
+  </div>
+  {% if theme.switch_banner %}
+<script type="text/javascript">
+var number_of_banners = {{ theme.banner_count }};
+var randnum = Math.floor(Math.random() * number_of_banners + 1);
+document.getElementById("header").style.cssText = "background-image:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url(/images/banner/" + randnum + ".jpg)!important;";
+</script>
+{% else %}
+<script type="text/javascript">
+document.getElementById("header").style.cssText = "background-image:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url(/images/banner/banner.jpg)!important;"; 
+{% endif %}
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('.protected').picopyright();
+  });
+  </script>
+  
+</script>
 
 </body>
 </html>

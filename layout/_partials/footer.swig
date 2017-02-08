@@ -12,7 +12,7 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.{{ theme.scheme }}</a>
   <span> Modified by </span>
-  <a class="theme-link" href="https://github.com/df7c5117">
+  <a class="theme-link" href="https://github.com/df7c5117/hexo-theme-next">
     df7c5117
   </a>
 </div>
